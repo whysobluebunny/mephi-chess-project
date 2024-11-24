@@ -3,6 +3,7 @@ package ru.mephi.abondarenko.model;
 public abstract class ChessPiece {
     protected String color;
     protected boolean check = true;
+
     public ChessPiece(String color) {
         this.color = color;
     }
@@ -25,5 +26,6 @@ public abstract class ChessPiece {
         return chessBoard.board[toLine][toColumn] == null
                 || !chessBoard.board[toLine][toColumn].getColor().equals(color);
     }
+
     public abstract String getSymbol();
 }
